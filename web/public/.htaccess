@@ -1,0 +1,25 @@
+# Apache config for shared hosting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^sw\.js$ - [L,H=application/javascript]
+  RewriteRule ^manifest\.webmanifest$ - [L,H=application/manifest+json]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "sw\.js$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "manifest\.webmanifest$">
+    Header set Content-Type "application/manifest+json"
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # HTTPS required for PWA
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+# MIME types
+AddType application/manifest+json .webmanifest
+AddType image/svg+xml .svg

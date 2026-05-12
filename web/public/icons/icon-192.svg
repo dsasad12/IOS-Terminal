@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#0a0a0a"/>
+  <rect x="11.52" y="11.52" width="168.96" height="168.96"
+        fill="none" stroke="#00ff41" stroke-width="4.800000000000001" rx="15.36"/>
+  <text x="96" y="92.16"
+        font-family="Courier New, monospace"
+        font-size="53.760000000000005"
+        font-weight="bold"
+        fill="#00ff41"
+        text-anchor="middle"
+        dominant-baseline="middle">HT</text>
+  <rect x="101.76" y="117.12" width="19.200000000000003" height="13.440000000000001" fill="#00ff41"/>
+  <text x="96" y="157.44"
+        font-family="Courier New, monospace"
+        font-size="13.440000000000001"
+        fill="#005511"
+        text-anchor="middle">HACKTERM</text>
+</svg>
